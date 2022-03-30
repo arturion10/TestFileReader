@@ -1,0 +1,17 @@
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\bin\Debug\net6.0\TestFileReader.exe
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\bin\Debug\net6.0\TestFileReader.deps.json
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\bin\Debug\net6.0\TestFileReader.runtimeconfig.json
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\bin\Debug\net6.0\TestFileReader.dll
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\bin\Debug\net6.0\TestFileReader.pdb
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\bin\Debug\net6.0\ConsoleTables.dll
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.csproj.AssemblyReference.cache
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.AssemblyInfoInputs.cache
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.AssemblyInfo.cs
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.csproj.CoreCompileInputs.cache
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.csproj.CopyComplete
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.dll
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\refint\TestFileReader.dll
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.pdb
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.genruntimeconfig.cache
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\ref\TestFileReader.dll
