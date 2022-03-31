@@ -209,5 +209,27 @@ namespace TestFileReader
             }
             return FilesWithChildDirectories;
         }
+
+        static IEnumerable<FileInfo> EnumerateFilesDeepIgnoringAccessException(DirectoryInfo root, string mask)
+        {
+            var localResult = new List<FileInfo>();
+            try
+            {
+                localResult = root.EnumerateFiles(mask).ToList();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                yield break;
+            }
+
+            foreach (var fi in localResult)
+                yield return fi;
+
+            foreach (var di in root.EnumerateDirectories())
+            {
+                foreach (var fi in EnumerateFilesDeepIgnoringAccessException(di, mask))
+                    yield return fi;
+            }
+        }
     }
 }
