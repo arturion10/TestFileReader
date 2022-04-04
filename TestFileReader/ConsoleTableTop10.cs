@@ -10,7 +10,7 @@ namespace TestFileReader
     internal class ConsoleTableTop10
     {
 
-        internal void PrintFormatTable(FileInfo[] Files)
+        internal string PrintFormatTable(FileInfo[] Files)
         {
             var Files1 = from a in Files orderby a.Name.Substring(a.Name.LastIndexOf('.')) select a;
             Console.WriteLine("Топ-10 количеству форматов файлов");
@@ -46,6 +46,7 @@ namespace TestFileReader
                                     FormatListSelect.ElementAt(i).Count);
             }
             tableFormat.Write(Format.Default);
+            return tableFormat.ToString();
             #region
             //топ 10 по одинаковому формату
             //Console.WriteLine("Топ-10 количеству форматов файлов");
@@ -85,7 +86,7 @@ namespace TestFileReader
             #endregion
         }
 
-        internal void PrintFormatTable(List<FileInfo> Files)
+        internal string PrintFormatTable(List<FileInfo> Files)
         {
             var Files1 = from a in Files orderby a.Name.Substring(a.Name.LastIndexOf('.')) select a;
             Console.WriteLine("Топ-10 количеству форматов файлов");
@@ -121,9 +122,10 @@ namespace TestFileReader
                                     FormatListSelect.ElementAt(i).Count);
             }
             tableFormat.Write(Format.Default);
+            return tableFormat.ToString();
         }
 
-        internal void PrintLengthTable(FileInfo[] Files)
+        internal string PrintLengthTable(FileInfo[] Files)
         {
             var Files1 = from l in Files orderby l.Length descending select l;
             var tableLength = new ConsoleTable("Название файла", "Размер файла");
@@ -138,9 +140,9 @@ namespace TestFileReader
                                    Files1.ElementAt(i).Length);
             }
             tableLength.Write(Format.Default);
-            Console.WriteLine();
+            return tableLength.ToString();
         }
-        internal void PrintLengthTable(List<FileInfo> Files)
+        internal string PrintLengthTable(List<FileInfo> Files)
         {
             var Files1 = from l in Files orderby l.Length descending select l;
             var tableLength = new ConsoleTable("Название файла", "Размер файла");
@@ -155,10 +157,10 @@ namespace TestFileReader
                                    Files1.ElementAt(i).Length);
             }
             tableLength.Write(Format.Default);
-            Console.WriteLine();
+            return tableLength.ToString();
         }
 
-        internal void PrintDateTable(FileInfo[] Files)
+        internal string PrintDateTable(FileInfo[] Files)
         {            
             var Files1 = from d in Files orderby d.CreationTime select d;
             var tableDate = new ConsoleTable("Название файла", "Дата появления файла");
@@ -173,9 +175,9 @@ namespace TestFileReader
                                  Files1.ElementAt(i).CreationTime);
             }
             tableDate.Write(Format.Default);
-            Console.WriteLine();
+            return tableDate.ToString();
         }
-        internal void PrintDateTable(List<FileInfo> Files)
+        internal string PrintDateTable(List<FileInfo> Files)
         {
             var Files1 = from d in Files orderby d.CreationTime select d;
             var tableDate = new ConsoleTable("Название файла", "Дата появления файла");
@@ -190,7 +192,7 @@ namespace TestFileReader
                                  Files1.ElementAt(i).CreationTime);
             }
             tableDate.Write(Format.Default);
-            Console.WriteLine();
+            return tableDate.ToString();
         }
 
         internal List<FileInfo> GetAllDirectories(DirectoryInfo di)
