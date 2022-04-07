@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace TestFileReader
 {
-    internal class FormatClass
+    [Serializable]
+    public class DateClass
     {
         public string Name { get; set; }
-        public int Count { get; set; }
+        public DateTime Date { get; set; }
 
-        public FormatClass(string name, int count)
+        public DateClass(string name, DateTime date)
         {
             Name = name;
-            Count = count;
+            Date = date;
         }
     }
 }
+

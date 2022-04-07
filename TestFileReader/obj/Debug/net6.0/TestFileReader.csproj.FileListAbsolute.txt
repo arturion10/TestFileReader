@@ -15,3 +15,4 @@ C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\De
 C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.pdb
 C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\TestFileReader.genruntimeconfig.cache
 C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\obj\Debug\net6.0\ref\TestFileReader.dll
+C:\Users\1\source\repos\CSharp\Ментор\TestFileReader\TestFileReader\bin\Debug\net6.0\Newtonsoft.Json.dll
