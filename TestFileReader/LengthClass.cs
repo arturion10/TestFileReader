@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace TestFileReader
 {
-    [Serializable]
     public class LengthClass
     {
         public string Name { get; set; }

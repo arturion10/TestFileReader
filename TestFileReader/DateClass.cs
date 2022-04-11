@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace TestFileReader
 {
-    [Serializable]
     public class DateClass
     {
         public string Name { get; set; }

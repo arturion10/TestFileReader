@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace TestFileReader
 {
-    [Serializable]
     public class ExtensionClass
     {
         public string Name { get; set; }

@@ -7,16 +7,11 @@ using System.Threading.Tasks;
 
 namespace TestFileReader
 {
-    [DataContract]
     public class AllStatic
     {
-        [DataMember]
         public string Path { get; set; }
-        [DataMember]
         public List<DateClass> Date { get; set; }
-        [DataMember]
         public List<LengthClass> Length { get; set; }
-        [DataMember]
         public List<ExtensionClass> Format { get; set; }
 
         public AllStatic(string path)
