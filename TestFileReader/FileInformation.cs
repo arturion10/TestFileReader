@@ -8,6 +8,7 @@ namespace TestFileReader
 {
     public class FileInformation
     {
+        public string Directory { get; set; }
         public string Name { get; set; }
         public string Extension { get; set; }
         public DateTime DateCreate { get; set; }
@@ -15,10 +16,14 @@ namespace TestFileReader
 
         public FileInformation(FileInfo file)
         {
+            Directory = file.DirectoryName;
             Name = file.Name;
             Extension = file.Extension;
             DateCreate = file.CreationTime;
             Length = file.Length;
+        }
+        public FileInformation()
+        {
         }
     }
 }
