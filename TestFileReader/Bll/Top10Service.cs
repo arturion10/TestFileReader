@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestFileReader
 {
-    internal class ConsoleTableTop10
+    internal class Top10Service
     {
 
         internal string PrintFormatTable(List<FileInfo> Files)

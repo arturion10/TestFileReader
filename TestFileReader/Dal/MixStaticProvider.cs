@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TestFileReader
 {
-    public class MixStatic
+    public class MixStaticProvider
     {
         public List<FileInformation>? FileInformations { get; set; } = new List<FileInformation>();
 
-        public MixStatic(string path)
+        public MixStaticProvider(string path)
         {
             var di = new DirectoryInfo(path);
             foreach (var file in di.GetFiles("*.*", SearchOption.AllDirectories).ToList())
@@ -19,7 +19,7 @@ namespace TestFileReader
                 FileInformations.Add(fi);
             }
         }
-        public MixStatic()
+        public MixStaticProvider()
         {
         }
     }

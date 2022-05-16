@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace TestFileReader
 {
-    public class AllStatic
+    public class AllStaticService
     {
         public string Path { get; set; }
         public List<DateClass> Date { get; set; }
         public List<LengthClass> Length { get; set; }
         public List<ExtensionClass> Format { get; set; }
 
-        public AllStatic(string path)
+        public AllStaticService(string path)
         {
             if (!System.IO.Directory.Exists(path))
             {
@@ -27,7 +27,7 @@ namespace TestFileReader
             Length = GetListLenght(fi);
             Format = GetListExtension(fi);
         }
-        public AllStatic(string path, List<DateClass> date, List<LengthClass> length, List<ExtensionClass> format)
+        public AllStaticService(string path, List<DateClass> date, List<LengthClass> length, List<ExtensionClass> format)
         {
             Path = path;
             Date = date;

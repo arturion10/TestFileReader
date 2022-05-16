@@ -14,15 +14,15 @@ ReadFileInformation();
 //@"C:\Users\1\OneDrive\Документы"
 var path = @"C:\Users\1\OneDrive\Документы";
 var outPath = "data.json";
-var mixStat = new MixStatic(path);
+var mixStat = new MixStaticProvider(path);
 var dataSer = JsonConvert.SerializeObject(mixStat, Formatting.Indented);
 File.WriteAllText(outPath, dataSer);
-var dataDeser = JsonConvert.DeserializeObject<MixStatic>(File.ReadAllText(outPath));
+var dataDeser = JsonConvert.DeserializeObject<MixStaticProvider>(File.ReadAllText(outPath));
 
 void PrintAllFiles()
 {
     var outPath = "data.json";
-    var dataDeser = JsonConvert.DeserializeObject<MixStatic>(File.ReadAllText(outPath));
+    var dataDeser = JsonConvert.DeserializeObject<MixStaticProvider>(File.ReadAllText(outPath));
     var tableData = new ConsoleTable("Название файла", /*"Путь файла",*/ "Дата создания", "Длина файла", "Расширение файла"); // Путь файла занимает слишком много места и таблица комкается.
     Console.WriteLine("Все данные по файлам");
     foreach (var f in dataDeser.FileInformations)
@@ -40,12 +40,12 @@ void PrintAllFiles()
 void ReadFileInformation()
 {
     var outPath = "data.json";
-    var dataDeser = JsonConvert.DeserializeObject<MixStatic>(File.ReadAllText(outPath));
+    var dataDeser = JsonConvert.DeserializeObject<MixStaticProvider>(File.ReadAllText(outPath));
     var path = Console.ReadLine();
     var pathData = dataDeser.FileInformations
                    .Where(x => x.Directory.StartsWith(path))
                    .ToList();
-    var newData = new MixStatic(path);
+    var newData = new MixStaticProvider(path);
     if (pathData.Count == 0)
     {
         dataDeser.FileInformations.AddRange(newData.FileInformations);
@@ -60,7 +60,7 @@ void ReadFileInformation()
     }
 }
 
-void ReaderToTable(MixStatic Data)
+void ReaderToTable(MixStaticProvider Data)
 {
     {
         var tableData = new ConsoleTable("Название файла", "Путь файла", "Дата создания", "Длина файла", "Расширение файла");
