@@ -29,12 +29,6 @@ namespace TestFileReader.Dal
 
             string[] mixArr = filesStrings.Split('|');
             var result = new FileInformation[mixArr.Length/4];
-            string name;
-            string extension;
-            DateTime dateTimeCreat;
-            long length;
-            string directory;
-
 
             for(int i = 0; i < mixArr.Length / 4; i++)
             {
