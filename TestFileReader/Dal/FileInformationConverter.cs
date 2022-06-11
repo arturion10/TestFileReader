@@ -18,7 +18,7 @@ namespace TestFileReader.Dal
             {
                 foreach(FileInformation file in files)
                 {
-                    stringsInfo.Append($"{file.Name} | {file.Extension} | {file.Length} | {file.Directory} | {file.DateCreate.ToString("G")}\n");
+                    stringsInfo.Append($"{file.Name}|{file.Extension}|{file.Length}|{file.Directory}|{file.DateCreate.ToString("G")}\n");
                 }
             }
             return stringsInfo.ToString();
@@ -28,15 +28,15 @@ namespace TestFileReader.Dal
         {
 
             string[] mixArr = filesStrings.Split('|');
-            var result = new FileInformation[mixArr.Length/4];
+            var result = new FileInformation[mixArr.Length/5];
 
-            for(int i = 0; i < mixArr.Length / 4; i++)
+            for(int i = 0; i < mixArr.Length / 5; i++)
             {
-                result[i] = new FileInformation(mixArr[i*4], 
-                                                mixArr[i*4+1], 
-                                                mixArr[i * 4 + 2], 
-                                                DateTime.ParseExact(mixArr[i * 4 + 3], "G", CultureInfo.GetCultureInfo("ru-RU")),
-                                                long.Parse(mixArr[i*4 + 4]));
+                result[i] = new FileInformation(mixArr[i * 5], 
+                                                mixArr[i * 5 + 1], 
+                                                mixArr[i * 5 + 2], 
+                                                DateTime.ParseExact(mixArr[i * 5 + 3], "G", CultureInfo.GetCultureInfo("ru-RU")),
+                                                long.Parse(mixArr[i * 5 + 4]));
             }
             return result;
         }
